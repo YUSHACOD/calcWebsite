@@ -13,6 +13,7 @@ document.getElementById("eight").onclick = function() {x="8"; display1();};
 document.getElementById("nine").onclick = function() {x="9"; display1();};
 
 document.getElementById("point").onclick = function() {x="."; display2();};
+document.getElementById("bSpace").onclick = function() {backspace();};
 document.getElementById("plus").onclick = function() {x="+"; display2();};
 document.getElementById("minus").onclick = function() {x="-"; display2();};
 document.getElementById("multiply").onclick = function() {x="*"; display2();};
@@ -40,12 +41,18 @@ function display2() {
         err=0;
     }
     else {
-        alert("WRONG SYNTAX!!\n You don't know maths.");
+        alert("Two operators cannot be used after one another.");
     }
 }
 
 function displayX() {
     x=eval(ans);
     ans=x;
+    document.getElementById("display").value=ans;
+}
+
+function backspace() {
+    ans=document.getElementById("display").value;
+    ans = ans.substring(0, ans.length - 1);
     document.getElementById("display").value=ans;
 }
