@@ -15,7 +15,7 @@ document.getElementById("nine").onclick = function() {x="9"; display1();};
 document.getElementById("point").onclick = function() {x="."; display2();};
 document.getElementById("bSpace").onclick = function() {backspace();};
 document.getElementById("plus").onclick = function() {x="+"; display2();};
-document.getElementById("minus").onclick = function() {x="-"; display2();};
+document.getElementById("minus").onclick = function() {x="-"; display1();};
 document.getElementById("multiply").onclick = function() {x="*"; display2();};
 document.getElementById("divide").onclick = function() {x="/"; display2();};
 document.getElementById("modulus").onclick = function() {x="%"; display2();};
